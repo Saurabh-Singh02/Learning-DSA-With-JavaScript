@@ -5,22 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stack</title>
+
     <script>
         let data = [];
         let crntSize = data.length;
         let max = 5;
+
+        document.getElementById("push_button").onclick = function() {push()};
+
+        document.getElementById("pop_button").onclick = function() {pop()};
+
+        document.getElementById("display_buttoin").onclick = function() {display()};
+
+
         function push() {
-            let NewValue= document.getElementById("Element").Value;
+            let NewValue= document.getElementById("Element").value;
             if (crntSize >= max) {
                 alert("Stack is full you cannot add" + NewValue);
             } else {
                 data[crntSize] = NewValue;
                 crntSize+=1;
-                document.getElementById("Element").Value="";
+                document.getElementById("Element").value="";
                 console.log("element added");
             }
         }
-        
+
         function pop() {
             if (crntSize > 0) {
                 crntSize-= 1;
@@ -29,17 +38,16 @@
                 alert("Stack is empty");
             }
         }
-       function display(){
-        for(let i = 0;i <= crntSize;i++)
-        console.log("element no.",i, "and value is", data[i]);
-       }      
-       
+        function display() {
+            for(let i = 0;i <= crntSize;i++)
+                console.log("element no.",i, "and value is", data[i]);
+        }
     </script>
 </head>
 <body>
     <input id="Element" type="text" placeholder="Enter your number">
-    <button onclick="push()">Add element to stack</button>
-    <button onclick="pop()">Remove element from stack</button>
-    <button onclick="display()">Display all elements of stack</button>
+    <button onclick="push()" id="push_button">Add element to stack</button>
+    <button onclick="pop()" id="pop_button">Remove element from stack</button>
+    <button onclick="display()" id="display_button">Display all elements of stack</button>
 </body>
-</html>
+</html> 
