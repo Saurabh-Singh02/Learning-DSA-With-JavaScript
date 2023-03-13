@@ -11,12 +11,15 @@
         let crntSize = data.length;
         let max = 5;
 
-        document.getElementById("push_button").onclick = push;
+        document.getElementById("push_button").onclick = function() {push()};
+
         document.getElementById("pop_button").onclick = function() {pop()};
+
         document.getElementById("display_buttoin").onclick = function() {display()};
 
+
         function push() {
-            let NewValue= document.getElementById("Element").Value;
+            let NewValue= document.getElementById("Element").value;
             if (crntSize >= max) {
                 alert("Stack is full you cannot add" + NewValue);
             } else {
