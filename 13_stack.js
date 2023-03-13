@@ -21,7 +21,7 @@ function pop() {
         alert("Stack is empty");
     }
 }
-function display(){
+function display() {
 for(let i = 0;i <= crntSize;i++)
 console.log("element no.",i, "and value is", data[i]);
 }
