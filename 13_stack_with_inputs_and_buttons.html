@@ -5,36 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stack</title>
-    <script>
-        let data = [];
-        let crntSize = data.length;
-        let max = 5;
-        function push() {
-            let NewValue= document.getElementById("Element").Value;
-            if (crntSize >= max) {
-                alert("Stack is full you cannot add" + NewValue);
-            } else {
-                data[crntSize] = NewValue;
-                crntSize+=1;
-                document.getElementById("Element").Value="";
-                console.log("element added");
-            }
-        }
-        
-        function pop() {
-            if (crntSize > 0) {
-                crntSize-= 1;
-                data.length = crntSize;
-            } else {
-                alert("Stack is empty");
-            }
-        }
-       function display(){
-        for(let i = 0;i <= crntSize;i++)
-        console.log("element no.",i, "and value is", data[i]);
-       }      
-       
-    </script>
 </head>
 <body>
     <input id="Element" type="text" placeholder="Enter your number">
