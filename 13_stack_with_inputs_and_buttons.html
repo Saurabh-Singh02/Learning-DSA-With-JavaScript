@@ -5,6 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stack</title>
+
+    <script>
+        let data = [];
+        let crntSize = data.length;
+        let max = 5;
+
+        document.getElementById("push_button").onclick = push;
+        document.getElementById("pop_button").onclick = function() {pop()};
+        document.getElementById("display_buttoin").onclick = function() {display()};
+
+        function push() {
+            let NewValue= document.getElementById("Element").Value;
+            if (crntSize >= max) {
+                alert("Stack is full you cannot add" + NewValue);
+            } else {
+                data[crntSize] = NewValue;
+                crntSize+=1;
+                document.getElementById("Element").Value="";
+                console.log("element added");
+            }
+        }
+
+        function pop() {
+            if (crntSize > 0) {
+                crntSize-= 1;
+                data.length = crntSize;
+            } else {
+                alert("Stack is empty");
+            }
+        }
+        function display() {
+            for(let i = 0;i <= crntSize;i++)
+                console.log("element no.",i, "and value is", data[i]);
+        }
+    </script>
 </head>
 <body>
     <input id="Element" type="text" placeholder="Enter your number">
@@ -12,4 +47,4 @@
     <button onclick="pop()" id="pop_button">Remove element from stack</button>
     <button onclick="display()" id="display_button">Display all elements of stack</button>
 </body>
-</html>
+</html> 
