@@ -3,8 +3,8 @@ let crntSize = data.length;
 let max = 5;
 
 document.getElementById("push_button").onclick = push;
-document.getElementById("pop_button").onclick = function() {myFunction()};
-document.getElementById("display_buttoin").onclick = function() {myFunction()};
+document.getElementById("pop_button").onclick = function() {pop()};
+document.getElementById("display_buttoin").onclick = function() {display()};
 
 function push() {
     let NewValue= document.getElementById("Element").Value;
