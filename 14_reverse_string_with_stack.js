@@ -23,5 +23,4 @@ let str = "Saurabh"
 str = str.split("")
 reverseStr(str);
 console.log(str);
-console.log(str.join(""));
-// console.log(data);
+console.log(str.join(""))
